@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.player {
+    width: 320px;
+    background: #2f3640;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin: 5px 0;
+}
+
+p {
+    margin: 5px 0 15px;
+    color: #dcdde1;
+}
+
+/* Progress Bar */
+.progress-container {
+    background: #555;
+    height: 6px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #00a8ff;
+    height: 100%;
+    width: 40%;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.controls button,
+.play-label {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.controls button:hover,
+.play-label:hover {
+    color: #00a8ff;
+}
+
+/* Hide checkbox */
+#play-toggle {
+    display: none;
+}
+
+/* Default Play Icon */
+.play-label::after {
+    content: "▶";
+}
+
+/* Change to Pause when checked */
+#play-toggle:checked + .play-label::after {
+    content: "⏸";
+}
